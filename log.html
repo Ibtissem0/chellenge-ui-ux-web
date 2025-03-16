@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAFAS - Login</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'joan', serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #D3C8C1;
+    }
+
+    /* Main Container */
+    .container {
+      display: flex;
+      width: 80%;
+      height: 85%;
+      max-width: 1000px;
+      background-color: #D3C8C1;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Left Section */
+    .left {
+      position: relative;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Dark Overlay on Left Image */
+    .left::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.563);
+      z-index: 1;
+    }
+
+        .overlay {
+            position: absolute;
+            text-align: left;
+            color: #D3C8C1;
+            z-index: 2;
+            top: 50%;
+            left: 10%;
+        }
+
+    .overlay h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .overlay pre {
+      font-size: 1rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+        /* Right Section */
+        
+        .right {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            top: -3%;
+        }
+
+        .right::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("/parfum\ backround.png") no-repeat center center;
+            background-size: cover;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        .right * {
+            position: relative;
+            z-index: 2;
+        }
+        .right h2 {
+            color:#7B3F3F;
+            font-size: 20px;
+            text-align: left;
+        }
+
+    /* Form Styling */
+    form {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      align-items: center;
+    }
+
+        label {
+            font-size: medium;
+            color: #7B3F3F;
+            margin-top: 15px;
+        }
+
+        input, button {
+            width: 90%;
+            padding: 12px;
+            border: none;
+            border-radius: 11px ;
+            background: rgba(138, 118, 106, 0.7);
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #7B3F3F;
+            color: #D3C8C1;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            width: 95%;
+        }
+
+    button:hover {
+      background-color: rgba(217, 217, 217, 0.8);
+      color: #7B3F3F;
+    }
+
+        .google-signup {
+            margin-top: 10px;
+        }
+
+        .google-btn {
+            background: #D3C8C1;
+            color: #7B3F3F;
+            border: 1px solid #7B3F3F;
+            padding: 10px;
+            border-radius: 11px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-weight: bold;
+        }
+
+    .google-btn:hover {
+      background: #7B3F3F;
+      color: rgba(217, 217, 217, 0.8);
+    }
+
+        p{
+            color:#7B3F3F ;
+        }
+        a{
+         color: #7B3F3F;
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 90%;
+                height: auto;
+            }
+
+            .left {
+                display: none; /* Hide the left section */
+            }
+
+            .right {
+                width: 100%;
+                padding: 20px;
+            }
+
+            input, button, .google-btn {
+                max-width: 90%;
+                margin-left: -2mm;
+            }
+        }
+        @media (max-width: 419px) {
+            .right {
+                padding: 15px;
+            }
+            input, button, .google-btn {
+                width: 80%;
+                margin-left: -1mm;
+            }
+        }
+        @media(max-height:551.33px){
+
+            .container{
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 95vh;
+                overflow-x:hidden;
+                overflow-y:hidden;
+            }
+            .right img{
+                top: 40px;
+
+            }
+            .right form{
+                top:-20px;
+                max-height:80vh;
+                overflow-y:hidden;
+
+
+            }
+
+            .google-btn img{
+                position: relative;
+                top: 0px;
+                left: -10px;
+            }
+
+            .overlay h3 {
+            margin-top: -80px;
+            font-size: 2rem;
+            
+                }
+            }
+                    
+
+        .overlay pre {
+            margin-top: 5%;
+            font-size: 1rem;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="/Group 78.png">
+            <div class="overlay">
+                <h3>NAFAS</h3>
+                <pre>
+Where tradition meets innovation, 
+blending the rich heritage of Arabian 
+perfumery with modern sophistication.</pre>
+            </div>
+        </div>
+        <div class="right">
+            <img src="/logof.png">
+            <h2>Welcome back!</h2>
+            <form>
+                <label class="email">Email</label>
+                <input type="email" placeholder="Email or phone number">
+                <label >Password</label>
+                <input type="password" placeholder="Enter password">
+                <button type="submit">Sign in</button>
+                <div class="google-signup">
+                    <button class="google-btn">
+                        <img src="/G.png" width="20"> Sign in with Google
+                    </button>
+                </div>
+                <p>Don't have an account? <a href="sign.html">Sign up now</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
